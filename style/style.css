@@ -37,29 +37,17 @@ body #notes {
 
 body .note {
     background-color: var(--blue);
-    display: flex;
-    justify-content: space-between;
 }
 
 body #notes .title, #notes .text {
     background-color: var(--green);
-    display: flex;
-    justify-content: space-between;
-    align-content: center;
 }
 
 body #write_new_note_button_container {
     background-color: var(--pink);
-    display: flex;
-    justify-content: flex-end;
 }
 
 body #new_note {
     border: solid var(--blue);
 }
 
-body #note_template {
-    display: none;
-}
-
-body .note
