@@ -1,0 +1,65 @@
+@media screen and (orientation:portrait) {
+    :root {
+        --unit: 1vw;
+    }
+}
+@media screen and (orientation:landscape) {
+    :root {
+        --unit: 1vh;
+    }
+}
+
+body {
+    --green: #34CC83;
+    --purple: #9900FF;
+    --blue: #6ED8FF;
+    --pink: #FF2B80;
+    --yellow: #FFF95B;
+}
+
+body .button {
+    background-color: var(--yellow);
+    cursor: pointer;
+    display: flex;
+}
+
+body .button:hover {
+    background-color: var(--pink);
+}
+
+body #notes_container_banner {
+    background-color: var(--purple);
+}
+
+body #notes {
+    background-color: var(--purple);
+}
+
+body .note {
+    background-color: var(--blue);
+    display: flex;
+    justify-content: space-between;
+}
+
+body #notes .title, #notes .text {
+    background-color: var(--green);
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+}
+
+body #write_new_note_button_container {
+    background-color: var(--pink);
+    display: flex;
+    justify-content: flex-end;
+}
+
+body #new_note {
+    border: solid var(--blue);
+}
+
+body #note_template {
+    display: none;
+}
+
+body .note

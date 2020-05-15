@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Notes</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="style/style.css" rel="stylesheet">
+
+    <script type="application/javascript" src="lib/jquery-3.4.1.min.js"></script>
+    <script type="application/javascript" src="notes.js"></script>
+
+    <script type="application/javascript">
+
+        $(function() {
+
+            function add_note(title, text) {
+                const $new_note = $('<div class="note">' +
+                    '<div class="banner">' +
+                    '<div class="title">' + title + '</div>' +
+                    '<a class="button material-icons">cancel</a>' +
+                    '</div>' +
+                    '<div class="text">' + text + '</div>' +
+                    '</div>');
+
+                const $notes = $('#notes');
+                $notes.append($new_note);
+
+                const $delete_note_button = $('#notes .button');
+                $delete_note_button.click(function() {
+                    $(this).parent().parent().remove();
+                });
+            }
+
+            const $write_new_note_button = $('#write_new_note_button');
+            $write_new_note_button.click(function () {
+                const $ongoing_note_container = $('.ongoing_note_container');
+                $ongoing_note_container.empty();
+
+                const $input_title = $('<input id="new_note_title" maxlength="100" type="text" placeholder="Title"></input>');
+                const $input_text = $('<input id="new_note_text" maxlength="1000" type="text" placeholder="Type your text here"></input>');
+                const $save_new_note = $('<a class="button" id="save_new_note">SAVE</a>');
+
+                $ongoing_note_container.append($input_title);
+                $ongoing_note_container.append($input_text);
+                $ongoing_note_container.append($save_new_note);
+
+                $input_title.focus();
+
+                $save_new_note.click(function () {
+                    const title = $('#new_note_title').val();
+                    const text = $('#new_note_text').val();
+                    add_note(title,text);
+                    const $ongoing_note_container = $('.ongoing_note_container');
+                    $ongoing_note_container.empty();
+                });
+            });
+        });
+
+    </script>
+</head>
+<body>
+
+<div id="notes_container_banner">
+        <span class="title">Notes</span>
+</div>
+
+<div id="notes"></div>
+
+<div id="write_new_note_button_container">
+    <a id="write_new_note_button" class="button material-icons">add_box</a>
+</div>
+
+<div class="ongoing_note_container"></div>
+
+
+<div id="note_template">
+    <div class="banner">
+        <div class="title">title</div>
+        <a class="button material-icons">cancel</a>
+    </div>
+    <div class="text">text</div>
+</div>
+
+</body>
+</html>
