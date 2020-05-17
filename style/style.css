@@ -18,9 +18,9 @@ body {
 }
 
 body .button {
-    background-color: var(--yellow);
     cursor: pointer;
     display: flex;
+    /*padding: var(--unit);*/
 }
 
 body .button:hover {
@@ -29,19 +29,27 @@ body .button:hover {
 
 #notes_container_banner {
     background-color: var(--purple);
+    font-weight: bold;
+    padding: var(--unit);
 }
 
 #notes {
-    background-color: var(--purple);
-
+    /*background-color: #DDD;*/
 }
-
 
 body .note {
-    background-color: var(--blue);
-
+    background-color: white;
+    margin: var(--unit);
+    padding: var(--unit);
 }
 
+body .note .title {
+    font-weight: bold;
+}
+
+body .note .text {
+    text-align: justify;
+}
 
 #notes .banner {
     display: flex;
@@ -49,8 +57,11 @@ body .note {
     justify-content: space-between;
 }
 
-#notes .title, #notes .text {
-    background-color: var(--green);
+#write_new_note_button_container {
+    display: flex;
+    justify-content: flex-end;
+    padding: var(--unit);
+    margin: var(--unit);
 }
 
 #ongoing_note_container {
@@ -59,3 +70,7 @@ body .note {
     flex-direction: column;
 }
 
+#save_new_note, #new_note_title, #new_note_text {
+    padding: var(--unit);
+
+}
