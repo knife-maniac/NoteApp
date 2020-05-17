@@ -27,27 +27,35 @@ body .button:hover {
     background-color: var(--pink);
 }
 
-body #notes_container_banner {
+#notes_container_banner {
     background-color: var(--purple);
 }
 
-body #notes {
+#notes {
     background-color: var(--purple);
+
 }
+
 
 body .note {
     background-color: var(--blue);
+
 }
 
-body #notes .title, #notes .text {
+
+#notes .banner {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#notes .title, #notes .text {
     background-color: var(--green);
 }
 
-body #write_new_note_button_container {
-    background-color: var(--pink);
-}
-
-body #new_note {
-    border: solid var(--blue);
+#ongoing_note_container {
+    background-color: var(--blue);
+    display: flex;
+    flex-direction: column;
 }
 

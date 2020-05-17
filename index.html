@@ -33,7 +33,7 @@
 
             const $write_new_note_button = $('#write_new_note_button');
             $write_new_note_button.click(function () {
-                const $ongoing_note_container = $('.ongoing_note_container');
+                const $ongoing_note_container = $('#ongoing_note_container');
                 $ongoing_note_container.empty();
 
                 const $input_title = $('<input id="new_note_title" maxlength="100" type="text" placeholder="Title"></input>');
@@ -50,7 +50,7 @@
                     const title = $('#new_note_title').val();
                     const text = $('#new_note_text').val();
                     add_note(title,text);
-                    const $ongoing_note_container = $('.ongoing_note_container');
+                    const $ongoing_note_container = $('#ongoing_note_container');
                     $ongoing_note_container.empty();
                 });
             });
@@ -70,7 +70,7 @@
     <a id="write_new_note_button" class="button material-icons">add_box</a>
 </div>
 
-<div class="ongoing_note_container"></div>
+<div id="ongoing_note_container"></div>
 
 </body>
 </html>
