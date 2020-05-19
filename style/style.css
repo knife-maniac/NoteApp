@@ -26,18 +26,21 @@ body .button {
 }
 
 body .button:hover {
-    background-color: grey;
+    background-color: darkgrey;
 }
 
 #notes_container_banner {
     background-color: yellow;
+    font-size: calc(2*var(--unit));
     font-weight: bold;
     margin: var(--unit);
     padding: var(--unit);
 }
 
-#notes {
-    /*background-color: #DDD;*/
+#notes .banner {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 body .note {
@@ -54,12 +57,6 @@ body .note .text {
     text-align: justify;
 }
 
-#notes .banner {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
 #write_new_note_button_container {
     display: flex;
     justify-content: flex-end;
@@ -68,13 +65,14 @@ body .note .text {
 }
 
 #write_new_note_button {
-    font-size: calc(5*var(--unit));
+    font-size: calc(4*var(--unit));
 }
 
 #ongoing_note_container {
-    background-color: yellow;
     display: flex;
     flex-direction: column;
+    padding: var(--unit);
+
 }
 
 #new_note_buttons_container {
@@ -83,11 +81,12 @@ body .note .text {
 }
 
 #new_note_title, #new_note_text {
-    font-size: medium;
+    font-size: calc(2*var(--unit));
     padding: var(--unit);
 }
 
 #new_note_buttons_container .button {
+    font-size: calc(4*var(--unit));
     padding: var(--unit);
 }
 
