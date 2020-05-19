@@ -37,8 +37,8 @@
                 $ongoing_note_container.empty();
 
                 const $input_title = $('<input id="new_note_title" maxlength="100" type="text" placeholder="Title"></input>');
-                const $input_text = $('<input id="new_note_text" maxlength="1000" type="text" placeholder="Type your text here"></input>');
-                const $save_new_note = $('<a class="button" id="save_new_note">SAVE</a>');
+                const $input_text = $('<input id="new_note_text" maxlength="10000" type="text" placeholder="Type your text here"></input>');
+                const $save_new_note = $('<a id="save_new_note" class="button material-icons">done</a>');
 
                 $ongoing_note_container.append($input_title);
                 $ongoing_note_container.append($input_text);
@@ -67,7 +67,7 @@
 <div id="notes"></div>
 
 <div id="write_new_note_button_container">
-    <a id="write_new_note_button" class="button material-icons">add_box</a>
+    <a id="write_new_note_button" class="button material-icons">note_add</a>
 </div>
 
 <div id="ongoing_note_container"></div>

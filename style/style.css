@@ -15,21 +15,24 @@ body {
     --blue: #6ED8FF;
     --pink: #FF2B80;
     --yellow: #FFF95B;
+
+    background-color: lightslategrey;
+    font-family: Verdana;
 }
 
 body .button {
     cursor: pointer;
     display: flex;
-    /*padding: var(--unit);*/
 }
 
 body .button:hover {
-    background-color: var(--pink);
+    background-color: grey;
 }
 
 #notes_container_banner {
-    background-color: var(--purple);
+    background-color: yellow;
     font-weight: bold;
+    margin: var(--unit);
     padding: var(--unit);
 }
 
@@ -38,7 +41,7 @@ body .button:hover {
 }
 
 body .note {
-    background-color: white;
+    background-color: lightyellow;
     margin: var(--unit);
     padding: var(--unit);
 }
@@ -64,13 +67,17 @@ body .note .text {
     margin: var(--unit);
 }
 
+#write_new_note_button {
+    font-size: calc(5*var(--unit));
+}
+
 #ongoing_note_container {
-    background-color: var(--blue);
+    background-color: yellow;
     display: flex;
     flex-direction: column;
 }
 
 #save_new_note, #new_note_title, #new_note_text {
     padding: var(--unit);
-
 }
+
