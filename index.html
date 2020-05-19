@@ -38,14 +38,8 @@
 
                 const $input_title = $('<input id="new_note_title" maxlength="100" type="text" placeholder="Title"></input>');
                 const $input_text = $('<input id="new_note_text" maxlength="10000" type="text" placeholder="Type your text here"></input>');
-                const $save_new_note = $('<a id="save_new_note" class="button material-icons">done</a>');
 
-                $ongoing_note_container.append($input_title);
-                $ongoing_note_container.append($input_text);
-                $ongoing_note_container.append($save_new_note);
-
-                $input_title.focus();
-
+                const $save_new_note = $('<a id="save_new_note" class="button material-icons">check</a>');
                 $save_new_note.click(function () {
                     const title = $('#new_note_title').val();
                     const text = $('#new_note_text').val();
@@ -53,6 +47,23 @@
                     const $ongoing_note_container = $('#ongoing_note_container');
                     $ongoing_note_container.empty();
                 });
+
+                const $discard_new_note = $('<a id="discard_new_note" class="button material-icons">close</a>');
+                $discard_new_note.click(function () {
+                    const $ongoing_note_container = $('#ongoing_note_container');
+                    $ongoing_note_container.empty();
+                });
+
+                const $new_note_buttons_container = $('<a id="new_note_buttons_container""></div>');
+                $new_note_buttons_container.append($save_new_note);
+                $new_note_buttons_container.append($discard_new_note);
+
+                $ongoing_note_container.append($input_title);
+                $ongoing_note_container.append($input_text);
+                $ongoing_note_container.append($new_note_buttons_container);
+
+                $input_title.focus();
+
             });
         });
 
